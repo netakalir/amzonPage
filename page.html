@@ -6,35 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        main{
+        main {
             display: grid;
             grid-template-rows: 15vw 85vw;
-            grid-template-columns: 50% 50% ;
+            grid-template-columns: 50% 50%;
             background-color: blue;
         }
 
-        header{
+        header {
             background-color: aqua;
             grid-column: 1/-1;
             grid-row: 1/2;
 
         }
 
-        body{
+        body {}
 
-        }
-        .left{
+        .left {
             background-color: red;
             grid-column: 1/2;
             grid-row: 2/-1;
         }
-        .right{
-            background-color: chartreuse;
+
+        .right {
+            background-color: white;
             grid-column: 2/-1;
             grid-row: 2/-1;
         }
 
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            height: 80%;
+        }
 
+        .rating {
+            font-size: 12px;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 16px;
+        }
+
+        #choise {
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            display: inline;
+            width: 18%;
+            height: 2.8%;
+            margin-top: 10px;
+            text-align: center;
+            align-content: center;
+        }
+
+        #salesAmont {
+            font-size: 80%;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #D5D9D9;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <main>
@@ -47,7 +83,20 @@
 
         </section>
         <section class="right">
-
+            <div class="description">
+                <p id="first">
+                    HP 14 Laptop, Intel Celeron N4020, 4 GB RAM, 64 GB Storage, 14-inch Micro-edge HD Display, Windows
+                    11 Home, Thin & Portable, 4K Graphics, One Year of Microsoft 365 (14-dq0040nr, Snowflake White)
+                </p>
+                <a id="visit" href="http://">Visit the HP Store</a>
+                <div class="rating">
+                    4.1 <stars class="stars">★★★★☆</stars>
+                </div>
+                <a id="Search" href="http://">Search this page</a>
+                <div id="choise">Amazon's Choise</div>
+                <p id="salesAmont">9K+ bought in past month</p>
+                <hr>
+            </div>
         </section>
     </body>
 
