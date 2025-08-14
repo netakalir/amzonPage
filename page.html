@@ -6,39 +6,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        main{
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main {
             display: grid;
-            grid-template-rows: 15vw 85vw; 
-            grid-template-columns: 50% 50% ;
+            grid-template-rows: 8vw 7vh 85vw;
+            grid-template-columns: 35% 65%;
             background-color: blue;
         }
 
-        header{
+        header {
             background-color: aqua;
             grid-column: 1/-1;
             grid-row: 1/2;
 
         }
 
-        body{
+        body {}
 
-        }
-        .left{
-            background-color: red;
+        .image {
+            background-color: white;
+            border: 1px red solid;
             grid-column: 1/2;
-            grid-row: 2/-1;
+            grid-row: 3/-1;
+            display: grid;
+            grid-template-rows: 1fr 8fr 1fr;
+            grid-template-columns: 15% 85%;
+            width: 100%;
+            height: 100%;
         }
-        .right{
+
+        .links {
+            border: 1px rgba(207, 248, 0, 0.992) solid;
+            grid-column: 1/-1;
+            grid-row: 2/3;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* gap: 1%; */
+            gap: clamp(4px, 1%, 40px);
+            padding-left: 2%;
+        }
+
+        .right {
             background-color: chartreuse;
             grid-column: 2/-1;
-            grid-row: 2/-1;
+            grid-row: 3/-1;
         }
 
+        header {
+            display: grid;
+            grid-template-rows: 45.8% 29.8% 24.4%;
+        }
 
+        .menuMain {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1%;
+            background-color: #131921;
+        }
+
+        #logo {
+            background-color: #131921;
+            width: 8%;
+            height: 90%;
+        }
+
+        .shipping {
+            display: inline-block;
+            background-color: #131921;
+            width: 15%;
+            height: 90%;
+            padding-top: 0.7%;
+        }
+
+        #imgShipping {
+            width: 80%;
+        }
+
+        .search {
+            display: flex;
+            align-items: stretch;
+            width: 60%;
+            height: 90%;
+        }
+
+        .select {
+            background-color: #849fb7;
+            height: 90%;
+            width: 5%;
+            padding-left: 30%;
+        }
+        #imgEnd{
+        width: 30%;
+        height: 60%;
+        }
+
+        .menu {
+            background-color: #232f3e;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .menu button{
+            color:#d8f7eb;
+            background-color: #232f3e;
+            border: #232f3e;
+            width: 3%;
+        }
+        .message {
+            grid-row: 3/4;
+            background-color: #d8f7eb;
+            padding-top:0.5% ;
+        }
     </style>
 </head>
 <main>
     <header>
+        <section class="menuMain">
+            <img src="assets/logo.png" alt="" id="logo">
+            <a class="shipping" href=""><img src="assets/shipping.png" alt="" id="imgShipping"></a>
+            <div class="search">
+                <select class="select" all>
+                    <option value="all"></option>
+                    <option value="alexa Skills"></option>
+                </select>
+                <input type="text" class="search input" placeholder="serach amazon">
+            </div>
+            <img id="imgEnd" src="assets/image.png" alt="">
+        </section>
+        <section class="menu">
+            <button>all</button>
+            <button>amazon aaul</button>
+            <button>Medical Care</button>
+            <button>luxury</button>
+            <button>best sellers</button>
+            <button>amazon bacick</button>
+            <button>Groceries</button>
+            <button>New Releases</button>
+            <button>Today's Deals</button>
+            <button>Registry</button>
+            <button>Prime</button>
+            <button>Customer Service</button>
+            <button> Gift Cards</button>
+            <button> Smart Home</button>
+            <button>Music</button>
+        </section>
+        <section class="message">We are experiencing shipping delays in your area. Please expect extended delivery time.
+</section>
 
     </header>
 
