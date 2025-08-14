@@ -6,35 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        main{
+        main {
             display: grid;
             grid-template-rows: 15vw 85vw;
-            grid-template-columns: 50% 50% ;
+            grid-template-columns: 50% 50%;
             background-color: blue;
         }
 
-        header{
+        header {
             background-color: aqua;
             grid-column: 1/-1;
             grid-row: 1/2;
 
         }
 
-        body{
+        body {}
 
+        .image {
+            background-color: white;
+            border:1px red solid;
+            grid-column: 1/2 ;
+            grid-row: 2/-1;
+
+            display: grid;
+            grid-template-rows: 1fr 8fr 1fr;
+            grid-template-columns: 15% 85%;
+            width: 100%;
+            height: 100%;
         }
-        .left{
-            background-color: red;
-            grid-column: 1/2;
+
+        .links {
+            border:1px rgba(207, 248, 0, 0.992) solid;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* gap: 1%; */
+            gap: clamp(4px, 1%, 40px);
+            padding-left: 2%;
+        }
+
+        .links a{
+            color: #565959;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration-line: none;
+            font-size: 12px;
+        }
+
+        .links a:hover{
+            
+            text-decoration-line: underline;
+        }
+
+        .img-bar {
+            border:1px rgb(34, 0, 255) solid;
+            grid-column: 1/2 ;
             grid-row: 2/-1;
         }
-        .right{
+
+        .img {
+            border:1px rgb(34, 255, 0) solid;
+            grid-column: 2/-1;
+            grid-row: 2/3;
+
+        }
+
+        .click-to-see {
+            border:1px rgb(0, 0, 0) solid;
+            grid-column: 2/-1;
+            grid-row: 3/4;
+
+        }
+
+        .right {
             background-color: chartreuse;
             grid-column: 2/-1;
             grid-row: 2/-1;
         }
-
-
     </style>
 </head>
 <main>
@@ -43,8 +93,31 @@
     </header>
 
     <body>
-        <section class="left">
-
+        <section class="image">
+            <div class="links">
+                <a class="Electronics" href="">
+                    Electronics
+                </a>
+                <p> ›</p>
+                <a class="Computers" href="">
+                    Computers & Accessories
+                </a>
+                <p> ›</p>
+                <a class="Computers & Tablets" href="">
+                    Computers & Tablets
+                </a>
+                <p> ›</p>
+                <a class="Laptops" href="">
+                    Laptops
+                </a>
+                <p> ›</p>
+                <a class="Traditional" href="">
+                    Traditional Laptops
+                </a>
+            </div>
+            <div class="img-bar"></div>
+            <div class="img"></div>
+            <div class="click-to-see"></div>
         </section>
         <section class="right">
 
