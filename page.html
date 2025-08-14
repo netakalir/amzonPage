@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        main{
+            display: grid;
+            grid-template-rows: 15vw 85vw;
+            grid-template-columns: 50% 50% ;
+            background-color: blue;
+        }
+
+        header{
+            background-color: aqua;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+
+        }
+
+        body{
+
+        }
+        .left{
+            background-color: red;
+            grid-column: 1/2;
+            grid-row: 2/-1;
+        }
+        .right{
+            background-color: chartreuse;
+            grid-column: 2/-1;
+            grid-row: 2/-1;
+        }
+
+
+    </style>
 </head>
-<body>
-    
-</body>
+<main>
+    <header>
+
+    </header>
+
+    <body>
+        <section class="left">
+
+        </section>
+        <section class="right">
+
+        </section>
+    </body>
+
+    <footer>
+
+    </footer>
+</main>
+
 </html>
