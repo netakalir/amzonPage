@@ -28,30 +28,113 @@
 
         body {}
 
+
         .image {
             background-color: white;
-            border: 1px red solid;
             grid-column: 1/2;
             grid-row: 3/-1;
-
-            display: grid;
-            grid-template-rows: 1fr 8fr 1fr;
-            grid-template-columns: 15% 85%;
+            flex-direction: column;
             width: 100%;
             height: 100%;
+            padding-left: 5%;
         }
 
+
         .links {
-            border: 1px rgba(207, 248, 0, 0.992) solid;
+            background-color: white;
             grid-column: 1/-1;
             grid-row: 2/3;
 
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            /* gap: 1%; */
             gap: clamp(4px, 1%, 40px);
             padding-left: 2%;
+        }
+
+        .links a {
+            color: #565959;
+            text-decoration-line: none;
+            font-size: 1vw;
+        }
+
+        .links a:hover {
+            text-decoration-line: underline;
+        }
+
+        .imgBar-img {
+            display: flex;
+            width: 100%;
+            height: 35%;
+            position: sticky;
+            top: 0;
+
+        }
+
+        .img-bar {
+            width: 10%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .img-bar>div {
+            border: 0.5px black solid;
+            width: 100%;
+            height: 49px;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .img-bar>div:hover {
+            background-color: #2162a1;
+            border-radius: 7px;
+        }
+
+        div>img {
+            width: 100%;
+            height: 100%;
+            padding: 1px 4px;
+        }
+
+        .img {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            height: 100%;
+
+        }
+
+        .img>img {
+            width: 100%;
+            height: 90%;
+            padding: 0;
+
+        }
+
+        .click-to-see {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+
+        }
+
+        .click-to-see>a {
+            color: #2162a1;
+            text-decoration-line: none;
+
+        }
+
+        .click-to-see a:hover {
+            text-decoration-line: underline;
         }
 
         .right {
@@ -220,7 +303,7 @@
             margin-top: 10px;
             font-size: 14px;
             font-family: "Amazon Ember", Arial, sans-serif;
-            
+
         }
 
         .technicalSpecifications th {
@@ -237,15 +320,173 @@
             text-align: left;
         }
 
+
+        header {
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .menuMain {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1%;
+            background-color: #131921;
+        }
+
+        #logo {
+            background-color: #131921;
+            width: 8%;
+            height: 90%;
+        }
+
+        .shipping {
+            display: inline-block;
+            background-color: #131921;
+            width: 15%;
+            height: 90%;
+            padding-top: 0.7%;
+        }
+
+        #imgShipping {
+            width: 80%;
+        }
+
+        .search {
+            display: flex;
+            align-items: stretch;
+            width: 60%;
+            height: 90%;
+        }
+
+        .select {
+            background-color: #849fb7;
+            height: 90%;
+            width: 5%;
+            padding-left: 30%;
+        }
+
+        #imgEnd {
+            width: 30%;
+            height: 60%;
+        }
+
+        .menu {
+            background-color: #232f3e;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .menu button {
+            color: #d8f7eb;
+            background-color: #232f3e;
+            border: #232f3e;
+            width: 3%;
+        }
+
+        .message {
+            grid-row: 3/4;
+            background-color: #d8f7eb;
+            padding-top: 0.5%;
+        }
     </style>
 </head>
 <main>
     <header>
-
+        <section class="menuMain">
+            <img src="img/logo.png" alt="" id="logo">
+            <a class="shipping" href=""><img src="img/shipping.png" alt="" id="imgShipping"></a>
+            <div class="search">
+                <select class="select" all>
+                    <option value="all"></option>
+                    <option value="alexa Skills"></option>
+                </select>
+                <input type="text" class="search input" placeholder="serach amazon">
+            </div>
+            <img id="imgEnd" src="img/imgEnd.png" alt="">
+        </section>
+        <section class="menu">
+            <button>all</button>
+            <button>amazon aaul</button>
+            <button>Medical Care</button>
+            <button>luxury</button>
+            <button>best sellers</button>
+            <button>amazon bacick</button>
+            <button>Groceries</button>
+            <button>New Releases</button>
+            <button>Today's Deals</button>
+            <button>Registry</button>
+            <button>Prime</button>
+            <button>Customer Service</button>
+            <button>Gift Cards</button>
+            <button>Smart Home</button>
+            <button>Music</button>
+        </section>
+        <section class="message"> We are experiencing shipping delays in your area. Please expect extended delivery
+            time.
+        </section>
     </header>
 
     <body>
-        <section class="left">
+        <div class="links">
+            <a class="Electronics" href="">
+                Electronics
+            </a>
+            <p> ›</p>
+            <a class="Computers" href="">
+                Computers & Accessories
+            </a>
+            <p> ›</p>
+            <a class="Computers & Tablets" href="">
+                Computers & Tablets
+            </a>
+            <p> ›</p>
+            <a class="Laptops" href="">
+                Laptops
+            </a>
+            <p> ›</p>
+            <a class="Traditional" href="">
+                Traditional Laptops
+            </a>
+        </div>
+        <section class="image">
+            <section class="imgBar-img">
+                <div class="img-bar">
+                    <div class="img-btn">
+                        <img src="./img/image.png" alt="">
+                    </div>
+                    <div class="img-btn-2">
+                        <img src="./img/image copy 2.png" alt="">
+                    </div>
+                    <div class="img-btn-3">
+                        <img src="./img/image copy 3.png" alt="">
+                    </div>
+                    <div class="img-btn-4">
+                        <img src="./img/image copy 4.png" alt="">
+                    </div>
+                    <div class="img-btn-1">
+                        <img src="./img/image.png" alt="">
+                    </div>
+                    <div class="img-btn-1">
+                        <img src="./img/image.png" alt="">
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="./img/image.png" alt="">
+                    <div class="click-to-see">
+                        <a href="">Click to see full view
+                        </a>
+                    </div>
+                </div>
+            </section>
 
         </section>
         <section class="right">
