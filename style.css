@@ -1,0 +1,391 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 8vw 7vh 85vw;
+    grid-template-columns: 35% 65%;
+    background-color: blue;
+}
+
+header {
+    background-color: aqua;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+
+}
+
+body {}
+
+
+.image {
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 3/-1;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+}
+
+
+.links {
+    background-color: white;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: clamp(4px, 1%, 40px);
+    padding-left: 2%;
+}
+
+.links a {
+    color: #565959;
+    text-decoration-line: none;
+    font-size: 1vw;
+}
+
+.links a:hover {
+    text-decoration-line: underline;
+}
+
+.imgBar-img {
+    display: flex;
+    width: 100%;
+    height: 35%;
+    position: sticky;
+    top: 0;
+
+}
+
+.img-bar {
+    width: 10%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.img-bar>div {
+    border: 0.5px black solid;
+    width: 100%;
+    height: 49px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.img-bar>div:hover {
+    background-color: #2162a1;
+    border-radius: 7px;
+}
+
+div>img {
+    width: 100%;
+    height: 100%;
+    padding: 1px 4px;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+
+}
+
+.img>img {
+    width: 100%;
+    height: 90%;
+    padding: 0;
+
+}
+
+.click-to-see {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+
+}
+
+.click-to-see>a {
+    color: #2162a1;
+    text-decoration-line: none;
+
+}
+
+.click-to-see a:hover {
+    text-decoration-line: underline;
+}
+
+.right {
+    background-color: white;
+    grid-column: 2/-1;
+    grid-row: 3/-1;
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    height: 33.3%;
+    margin-left: 20px;
+    width: 50%;
+}
+
+#first {
+    /* background-color: #CC0C39; */
+    width: 100%;
+    height: 50%;
+    display: inline;
+    text-align: start;
+    align-content: center;
+    font-size: 24px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.rating {
+    /* background-color: #CC0C39; */
+    display: inline;
+    font-size: 12px;
+    width: 100%;
+    height: 10%;
+    align-content: center;
+    text-align: start;
+}
+
+.stars {
+    color: gold;
+    font-size: 16px;
+
+}
+
+#choiseWidht {
+    background-color: white;
+
+    display: inline;
+    width: 100%;
+    height: 8%;
+    margin-top: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+#choise {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    width: 30%;
+}
+
+#salesAmont {
+    display: inline;
+    width: 100%;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    ;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: start;
+    align-content: center;
+    height: 5%;
+}
+
+hr {
+    display: inline;
+    border: none;
+    border-top: 2px solid #D5D9D9;
+    margin: 10px 0px 0px 0px;
+    width: 100%;
+    height: 0.5%;
+}
+
+
+#visit {
+    height: 5%;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+#search {
+    height: 5%;
+    width: 100%;
+    font-size: 12px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    height: 33.3%;
+    margin: 0px 0px 0px 20px;
+    width: 50%;
+}
+
+
+#sale {
+    background-color: #CC0C39;
+    color: white;
+    border-radius: 5px;
+    display: inline;
+    width: 12%;
+    height: 90%;
+    text-align: center;
+    align-content: center;
+}
+
+#fullPrice {
+    /* background-color: #CC0C39; */
+    border-radius: 12px;
+    display: inline;
+    width: 12%;
+    height: 50%;
+    text-align: center;
+    align-content: center;
+}
+
+.price {
+    margin-bottom: 0px;
+    gap: 3px;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: flex-start;
+}
+
+#listPrice {
+    margin-top: 1px;
+    font-size: 12px;
+    width: 100%;
+    height: 4%;
+    color: #616464;
+    /* background-color: #CC0C39; */
+}
+
+#shipping {
+    width: 100%;
+    /* background-color: #CC0C39; */
+    height: 10%;
+    align-content: center;
+    text-align: start;
+    font-size: 14px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+#shipping::first-line {
+    color: #616464;
+}
+
+.technicalSpecifications {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+
+}
+
+.technicalSpecifications th {
+    padding: 2px 10px;
+    text-align: left;
+}
+
+.technicalSpecifications th {
+    font-weight: bold;
+    width: 15%;
+}
+
+.technicalSpecifications td {
+    text-align: left;
+}
+
+
+header {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.menuMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    background-color: #131921;
+}
+
+#logo {
+    background-color: #131921;
+    width: 8%;
+    height: 90%;
+}
+
+.shipping {
+    display: inline-block;
+    background-color: #131921;
+    width: 15%;
+    height: 90%;
+    padding-top: 0.7%;
+}
+
+#imgShipping {
+    width: 80%;
+}
+
+.search {
+    display: flex;
+    align-items: stretch;
+    width: 60%;
+    height: 90%;
+}
+
+.select {
+    background-color: #849fb7;
+    height: 90%;
+    width: 5%;
+    padding-left: 30%;
+}
+
+#imgEnd {
+    width: 30%;
+    height: 60%;
+}
+
+.menu {
+    background-color: #232f3e;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu button {
+    color: #d8f7eb;
+    background-color: #232f3e;
+    border: #232f3e;
+    width: 3%;
+}
+
+.message {
+    grid-row: 3/4;
+    background-color: #d8f7eb;
+    padding-top: 0.5%;
+}
